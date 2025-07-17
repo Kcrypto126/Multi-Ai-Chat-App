@@ -75,10 +75,6 @@ def get_n_day_weather_forecast(location: str, format: str, num_days: int):
     )
 
 
-tool_map = {
-    "get_current_weather": get_current_weather,
-    "get_n_day_weather_forecast": get_n_day_weather_forecast,
-}
 
 
 async def create():
