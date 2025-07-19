@@ -28,17 +28,7 @@ MODEL = "gpt-4o"
 
 
 class MinoAssistant:
-    def __init__(
-        self,
-        openai_client: AsyncOpenAI | None,
-    ):
-        if openai_client is None:
-            self.__openai_client__ = AsyncOpenAI(max_retries=2)
-        else:
-            self.__openai_client__ = openai_client
-
-        self.name = constants.APP_NAME
-        self.instructions = INSTRUCTIONS
+    
 
     async def run_assistant(self) -> Assistant:
         tool = constants.ASSISTANT_TOOL_CODE_INTEPRETER
